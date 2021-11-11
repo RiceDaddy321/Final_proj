@@ -1,4 +1,4 @@
-.header {
+nav {
     align-items: center;
     justify-content: center;
     display: flex;
@@ -16,9 +16,8 @@
 
 .buttons {
     align-items: center;
-    justify-content: space-between;
-    display: flex;
-    
+    justify-content: space-between !important;
+    display: flex;    
 }
 
 .button {
@@ -36,7 +35,7 @@
 }
 
 .independent {
-    
+    margin-right: 1.5rem;
 }
 
 .independent:hover {
@@ -45,8 +44,8 @@
 
 
 .random {
-    
-    
+    margin-left: 1.5rem;
+        
 }
 
 .random:hover {
