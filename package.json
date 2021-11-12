@@ -1,0 +1,17 @@
+{
+    "name": "app",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {},
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "axiom": "^0.1.6",
+        "axios": "latest",
+        "body-parser": "latest",
+        "ejs": "latest",
+        "express": "latest",
+        "parcel": "^2.0.1"
+    }
+}
