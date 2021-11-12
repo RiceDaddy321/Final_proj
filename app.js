@@ -1,40 +1,25 @@
-const axios = require('axios').default;
+const axios = require("axios");
 
-var text = document.getElementById("mytext");
-var iPage = `<div class="iPage page" id="iPage">itest
-</div>`;
-var rPage = `<div class="rPage page" id="rPage">rtest
-</div>`;
-
+function showImage(res)
+{
+    document.getElementById("mytext").innerHTML = `
+    <div class="rPage page" id="rPage">
+        <img src="${res.url}" height=100px width=300px alt="">
+    </div>
+    `;
+}
 //get a random image from the api
-// async function getRandomImage() {
-//     try {
-//         //get response from api
-//         const response = await axios.get('https://api.thedogapi.com/v1/images/search');
+async function getRandomImage() {
+    axios.get('https://api.thedogapi.com/v1/images/search', {
+        timeOut: 5000
+    })
+    .then(res => showImage(res))
+    .catch(err => console.error(err));
+}
 
-//         const dogImageUrl = response.url;
+// Event listeners
+document.querySelector('.random').addEventListener('click', getRandomImage());
 
-//         //for debugging
-//         console.log("here is the image url: ", dogImageUrl);
 
-//         return dogImageUrl;
-//     }catch (errors) {
-//         console.error(errors);
-//         console.log("oops...something went wrong.");
-//     }
-// }
 
-//for making the buttons behave correctly
-var random_button = document.querySelector(".random");
-var independent_button = document.querySelector(".independent");
-random_button.addEventListener("click", function() {
-    text.innerHTML = iPage;
-    console.log("random button pressed");
-    onRandom = true;
-});
-independent_button.addEventListener("click", function() {
-    text.innerHTML = rPage;
-    console.log("independent button pressed");
-    onRandom = false;
-});
   
