@@ -1,25 +1,28 @@
+//create express instance
+const express = require('express');
+const bodyParser = require('body-parser');
+const ejs = require('ejs');
+const htmlParser = require('htmlparser');
+const path = require('path');
+
+//start express
+var app = express();
+
+//important stuff
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname + '/public'));
+app.use(express.static(path.join(__dirname + '/public')));
+
+//make the axios variable
 const axios = require("axios");
 
-function showImage(res)
-{
-    document.getElementById("mytext").innerHTML = `
-    <div class="rPage page" id="rPage">
-        <img src="${res.url}" height=100px width=300px alt="">
-    </div>
-    `;
-}
-//get a random image from the api
-async function getRandomImage() {
-    axios.get('https://api.thedogapi.com/v1/images/search', {
-        timeOut: 5000
-    })
-    .then(res => showImage(res))
-    .catch(err => console.error(err));
-}
+//try to use external module
+var birds = require('./public/scripts/bird');
+var home = require('./public/scripts/buttons');
+app.use('/birds', birds);
+app.use('/', home);
 
-// Event listeners
-document.querySelector('.random').addEventListener('click', getRandomImage());
-
-
-
+app.listen(3000, () => console.log("server has been started"));
   

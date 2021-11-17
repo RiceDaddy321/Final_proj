@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
     <title>Juan's Dogs</title>
 </head>
 <body>
@@ -18,16 +18,15 @@
 
     <!-- The two choices -->
     <nav class="choose">
-        <div class="buttons">
-            <button class="independent button">Let Me Decide</button>
-            <button class="random button">Let Fate Decide</button>
-        </div>
+        <form class="buttons" method="post">
+            <input type="submit" formaction="/independent" value="Let Me Decide" class="independent button">
+            <input type="submit" formaction="/random" value="Let Fate Decide" class="random button">
+        </form>
     </nav>
 
     <!-- Use the api to call for a thing -->
     <nav id="mytext"></nav>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
-    <script src="app.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="/public/scripts/buttons.js"></script>
 </body>
 </html>
