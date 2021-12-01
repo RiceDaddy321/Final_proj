@@ -1,0 +1,18 @@
+[
+    {"breeds":
+    [
+        {"weight":{"imperial":"45 - 55""metric":"20 - 25"}"height":{"imperial":"20 - 22",
+        "metric":"51 - 56"},
+        "id":32,
+        "name":"Bearded Collie",
+        "bred_for":"Sheep herding",
+        "breed_group":"Herding",
+        "life_span":"12 - 14 years",
+        "temperament":"Self-confidence, Hardy, Lively, Alert, Intelligent, Active",
+        "reference_image_id":"A09F4c1qP"}
+    ],
+    "id":"iYNlO0y4T",
+    "url":"https://cdn2.thedogapi.com/images/iYNlO0y4T.jpg",
+    "width":1080,
+    "height":1080}
+]
