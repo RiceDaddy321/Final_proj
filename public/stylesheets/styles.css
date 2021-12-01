@@ -1,5 +1,4 @@
 nav {
-    align-items: center;
     justify-content: center;
     display: flex;
     text-align: center;
@@ -50,6 +49,33 @@ nav {
 
 .random:hover {
 
+}
+
+.category {
+    color: #601700;
+}
+
+.category_value {
+    color: #A76D60;
+}
+.dogName {
+    color:#00A676;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #E0D0C1;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.breed_props {
+    border: 2px;
+    border-
+    border-color: #A76D60;
+    margin: 10px;
+    width: 30%;
+}
+
+.dogimg {
+    margin: 1rem;
 }
 
 html {
